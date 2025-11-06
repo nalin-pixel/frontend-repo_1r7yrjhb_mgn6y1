@@ -1,28 +1,25 @@
-import { useState } from 'react'
+import React from 'react';
+import NavBar from './components/NavBar';
+import HeroCover from './components/HeroCover';
+import PortfolioGrid from './components/PortfolioGrid';
+import Services from './components/Services';
+import ContactCTA from './components/ContactCTA';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="font-['Inter','ui-sans-serif'] bg-white text-zinc-900">
+      <NavBar />
+      <HeroCover />
+      <PortfolioGrid />
+      <Services />
+      <ContactCTA />
+      <footer className="border-t border-zinc-200 py-10">
+        <div className="mx-auto max-w-6xl px-6 text-sm text-zinc-500">
+          © {new Date().getFullYear()} Côte Atelier — Private & Yacht Event Photography • South of France • Worldwide
         </div>
-      </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
