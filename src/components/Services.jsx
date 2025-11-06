@@ -21,17 +21,17 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="bg-zinc-50/70 py-16">
+    <section id="services" className="bg-neutral-950 py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-3xl font-semibold tracking-tight text-zinc-800 md:text-4xl">Expertise</h2>
-        <p className="mt-2 max-w-2xl text-zinc-600">An elegant, minimal approach that lets your event take center stage.</p>
+        <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">Expertise</h2>
+        <p className="mt-2 max-w-2xl text-zinc-400">An elegant, minimal approach that lets your event take center stage.</p>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {services.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-              <Icon className="h-6 w-6 text-amber-600" />
-              <h3 className="mt-4 text-lg font-medium text-zinc-800">{title}</h3>
-              <p className="mt-2 text-sm text-zinc-600">{desc}</p>
+            <div key={title} className="rounded-2xl border border-white/10 bg-neutral-900 p-6 shadow-sm">
+              <Icon className="h-6 w-6 text-emerald-400" />
+              <h3 className="mt-4 text-lg font-medium text-white">{title}</h3>
+              <p className="mt-2 text-sm text-zinc-400">{desc}</p>
             </div>
           ))}
         </div>
