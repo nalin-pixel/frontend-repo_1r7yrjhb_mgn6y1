@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { Globe2, Mail, Phone } from 'lucide-react';
+import { Globe2, Mail, Phone, Instagram } from 'lucide-react';
 
 const ContactCTA = () => {
   const [status, setStatus] = useState('idle');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Lightweight front-end only submission (no backend required for this presentation)
     setStatus('loading');
     setTimeout(() => setStatus('success'), 1000);
   };
@@ -24,8 +23,20 @@ const ContactCTA = () => {
             </p>
             <div className="mt-6 space-y-3 text-sm text-zinc-700">
               <div className="flex items-center gap-2"><Globe2 className="h-4 w-4 text-amber-600" /> Côte d'Azur • Monaco • Cannes • Saint-Tropez • Worldwide</div>
-              <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-amber-600" /> studio@example.com</div>
-              <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-amber-600" /> +33 6 12 34 56 78</div>
+              <a href="mailto:d.lobello240295@gmail.com" className="flex items-center gap-2 hover:text-zinc-900">
+                <Mail className="h-4 w-4 text-amber-600" /> d.lobello240295@gmail.com
+              </a>
+              <a href="tel:+3383724912" className="flex items-center gap-2 hover:text-zinc-900">
+                <Phone className="h-4 w-4 text-amber-600" /> +33 83 72 49 12
+              </a>
+              <a
+                href="https://instagram.com/lobellodavide"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 hover:text-zinc-900"
+              >
+                <Instagram className="h-4 w-4 text-amber-600" /> @lobellodavide
+              </a>
             </div>
           </div>
 
